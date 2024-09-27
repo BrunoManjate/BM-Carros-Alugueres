@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+}
+
+.cta-button {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d62839;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .cta-container {
+        margin-top: 10px;
+    }
+}
+/* Hero Section */
+.hero {
+    background-image: url('img/a-black-and-white-photo-of-a-bmw-m4-car-parked-on--Std4TBf8Qn2_7KSer5W4SQ-KWTh4iF7SXaoJDccRG3BNg.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Destaques da Frota */
+.frota {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.frota h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.frota-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.veiculo {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    /* Tamanho padrão */
+}
+
+.veiculo img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.veiculo h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.veiculo p {
+    margin: 5px 0;
+}
+
+.preco {
+    font-weight: bold;
+    color: #e63946;
+}
+
+.cta-button {
+    display: block;
+    margin: 10px auto;
+    /* Centraliza o botão */
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.cta-button:hover {
+    background-color: #d62839;
+    /* Vermelho escuro */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Alinha logo e menu verticalmente */
+        align-items: flex-start;
+        /* Alinha à esquerda */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Menu em coluna */
+        width: 100%;
+        /* Largura total */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* Espaço entre itens do menu */
+    }
+
+    .hero h2 {
+        font-size: 28px;
+        /* Tamanho do título menor */
+    }
+
+    .hero p {
+        font-size: 18px;
+        /* Tamanho do subtítulo menor */
+    }
+
+    .veiculo {
+        width: 100%;
+        /* Veículos ocupam 100% da largura */
+        max-width: 300px;
+        /* Largura máxima para manter o estilo */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 24px;
+        /* Tamanho do título ainda menor */
+    }
+
+    .hero p {
+        font-size: 16px;
+        /* Tamanho do subtítulo ainda menor */
+    }
+
+    .veiculo {
+        margin: 10px;
+        /* Menos margem entre veículos */
+        padding: 15px;
+        /* Menos preenchimento */
+    }
+}
+
+/*beneficios*/
+.beneficios {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    /* Cor de fundo clara */
+}
+
+.beneficios h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espaço entre os ícones */
+    flex-wrap: wrap;
+    /* Permite que os ícones se movam para a linha seguinte em telas menores */
+}
+
+.beneficio {
+    flex: 1 1 250px;
+    /* Permite flexibilidade e largura mínima */
+    margin: 15px;
+    /* Margem entre os benefícios */
+    text-align: center;
+    /* Centraliza o texto */
+    max-width: 300px;
+    /* Largura máxima para os cartões */
+}
+
+.beneficio-icon {
+    width: 60px;
+    /* Tamanho dos ícones */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin-bottom: 10px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.beneficio h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.beneficio p {
+    font-size: 16px;
+    color: #666;
+    /* Cor do texto descritivo */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .beneficios-container {
+        justify-content: center;
+        /* Centraliza os ícones em telas menores */
+    }
+
+    .beneficio {
+        flex: 1 1 200px;
+        /* Ajusta a largura mínima para telas menores */
+    }
+
+    .beneficio-icon {
+        width: 50px;
+        /* Tamanho menor dos ícones */
+    }
+}
+
+/*testemunhos*/
+.testemunhos {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    /* Cor de fundo leve */
+}
+
+.testemunhos h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.testemunhos-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espaço entre os testemunhos */
+    flex-wrap: wrap;
+    /* Permite que os testemunhos se movam para a linha seguinte em telas menores */
+}
+
+.testemunho {
+    background-color: #fff;
+    /* Fundo branco para os cartões de testemunho */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    /* Largura padrão para cada testemunho */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.cliente-foto {
+    width: 80px;
+    /* Tamanho da foto do cliente */
+    height: 80px;
+    /* Tamanho fixo para as fotos */
+    border-radius: 50%;
+    /* Fotos em formato circular */
+    margin-bottom: 10px;
+    /* Espaço entre a foto e o texto */
+}
+
+.testemunho h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.testemunho p {
+    font-size: 16px;
+    color: #666;
+    /* Cor do texto descritivo */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .testemunhos-container {
+        justify-content: center;
+        /* Centraliza os testemunhos em telas menores */
+    }
+
+    .testemunho {
+        width: 90%;
+        /* Largura ajustada para telas menores */
+    }
+
+    .cliente-foto {
+        width: 60px;
+        /* Tamanho menor das fotos */
+        height: 60px;
+        /* Tamanho menor das fotos */
+    }
+}
+
+.reserva {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    /* Cor de fundo clara */
+}
+
+.reserva h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    /* Coloca os campos em coluna */
+    align-items: center;
+    /* Centraliza os itens do formulário */
+    max-width: 400px;
+    /* Largura máxima do formulário */
+    margin: 0 auto;
+    /* Centraliza o formulário na página */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    /* Espaço entre os campos do formulário */
+    width: 100%;
+    /* Largura total */
+}
+
+label {
+    display: block;
+    /* Torna os labels em bloco */
+    margin-bottom: 5px;
+    /* Espaço entre o label e o campo */
+    font-size: 16px;
+    /* Tamanho da fonte do label */
+}
+
+input,
+select {
+    width: 100%;
+    /* Largura total dos campos */
+    padding: 10px;
+    /* Espaço interno dos campos */
+    border: 1px solid #ccc;
+    /* Borda dos campos */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    font-size: 16px;
+    /* Tamanho da fonte do campo */
+}
+
+input:focus,
+select:focus {
+    border-color: #e63946;
+    /* Cor da borda ao focar */
+}
+
+.cta-button {
+    background-color: #e63946;
+    /* Vermelho */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.cta-button:hover {
+    background-color: #d62839;
+    /* Vermelho escuro */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .reserva-form {
+        width: 90%;
+        /* Largura ajustada para telas menores */
+    }
+}
+
+.footer {
+    background-color: #000;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto branco */
+    padding: 40px 20px;
+    /* Espaçamento interno */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* Ajusta o espaçamento entre colunas */
+    flex-wrap: wrap;
+    /* Permite colunas se reorganizarem em telas menores */
+}
+
+.footer-logo {
+    width: 150px;
+    /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 20px;
+}
+
+.sobre-nos {
+    max-width: 250px;
+    /* Limita a largura da seção Sobre Nós */
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    /* Espaço abaixo do título */
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer ul {
+    list-style: none;
+    /* Remove marcadores da lista */
+    padding: 0;
+    /* Remove padding */
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    /* Espaço entre os itens da lista */
+}
+
+.footer a {
+    color: #fff;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove sublinhado */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    /* Sublinha ao passar o mouse */
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    /* Alinha os ícones ao centro */
+}
+
+.social-icon {
+    width: 30px;
+    /* Tamanho dos ícones sociais */
+    height: 30px;
+    /* Tamanho dos ícones sociais */
+    margin: 0 10px;
+    /* Espaço entre os ícones */
+}
+
+.footer-bottom {
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 20px;
+    /* Espaço acima do rodapé */
+    font-size: 14px;
+    /* Tamanho da fonte do rodapé */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Alinha as colunas em coluna em telas menores */
+        align-items: center;
+        /* Centraliza os itens */
+    }
+}

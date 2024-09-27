@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Carros Alugueres</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="#hero"><img src="img/4 (5).png" alt="Logo BM Carros Alugueres" class="logo-img"></a>
+            <!-- Substitua o caminho para a logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#frota">Frota</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="cta-container">
+            <a href="#reservas" class="cta-button">Reservar Agora</a>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Alugue o Carro Perfeito para Seu Evento!</h2>
+            <p>Experiência, qualidade e preços acessíveis.</p>
+            <button class="cta-button" id="reserveBtn">Reserve Agora</button>
+        </div>
+    </section>
+    
+
+    <section class="frota">
+        <h2>Destaques da Frota</h2>
+        <div class="frota-container">
+            <div class="veiculo">
+                <img src="img/a-photo-of-a-black-and-red-car-with-the-logo-bm-ca-F6IinnbaTqeBKWj12JIG5Q-XU6juftITM-eNAyz0rOEZQ.jpeg" alt="Carro 1"> <!-- Substitua pelo caminho da sua imagem -->
+                <h3>Carro Simples</h3>
+                <p>Ideal para passeios urbanos e viagens curtas.</p>
+                <p class="preco">Preço diário: 30,000 MZN</p>
+                <button class="cta-button">Saiba Mais</button>
+                <button class="cta-button">Reservar Agora</button>
+            </div>
+            <div class="veiculo">
+                <img src="img/a-photo-of-a-row-of-black-cars-with-red-and-white--o0jGju4SRQqT4McSSMQ2dA-JTPDjUjTQoKzg6-KfNjkUw.jpeg" alt="Carro 2"> <!-- Substitua pelo caminho da sua imagem -->
+                <h3>Carro Corporativo</h3>
+                <p>Perfeito para viagens de negócios e eventos.</p>
+                <p class="preco">Preço diário: 50,000 MZN</p>
+                <button class="cta-button">Saiba Mais</button>
+                <button class="cta-button">Reservar Agora</button>
+            </div>
+            <div class="veiculo">
+                <img src="img/a-photo-of-black-white-and-red-classic-cars-lined--mWW_AlYUR1GVlilx9tbM_w-JTPDjUjTQoKzg6-KfNjkUw.jpeg" alt="Carro 3"> <!-- Substitua pelo caminho da sua imagem -->
+                <h3>Carro para Eventos</h3>
+                <p>Excelente para casamentos e celebrações especiais.</p>
+                <p class="preco">Preço diário: 75,000 MZN</p>
+                <button class="cta-button">Saiba Mais</button>
+                <button class="cta-button">Reservar Agora</button>
+            </div>
+            <!-- Você pode adicionar mais veículos conforme necessário -->
+        </div>
+    </section>
+
+    <section class="beneficios">
+        <h2>Benefícios do Aluguel</h2>
+        <div class="beneficios-container">
+            <div class="beneficio">
+                <img src="img/7.png" alt="Atendimento Personalizado" class="beneficio-icon">
+                <h3>Atendimento Personalizado</h3>
+                <p>Nosso suporte está sempre disponível para você.</p>
+            </div>
+            <div class="beneficio">
+                <img src="img/9.png" alt="Entrega e Retirada" class="beneficio-icon">
+                <h3>Entrega e Retirada</h3>
+                <p>Entregamos no local desejado.</p>
+            </div>
+            <div class="beneficio">
+                <img src="img/8.png" alt="Variedade de Veículos" class="beneficio-icon">
+                <h3>Variedade de Veículos</h3>
+                <p>Escolha entre carros simples, corporativos e para eventos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testemunhos">
+        <h2>Testemunhos de Clientes</h2>
+        <div class="testemunhos-container">
+            <div class="testemunho">
+                <img src="img/10.png" alt="Cliente 1" class="cliente-foto">
+                <h3>Maria Silva</h3>
+                <p>"A experiência de aluguel foi excelente! O carro estava em ótimo estado e o atendimento foi impecável."
+                </p>
+            </div>
+            <div class="testemunho">
+                <img src="img/12.png" alt="Cliente 2" class="cliente-foto">
+                <h3>João Pereira</h3>
+                <p>"Fiquei muito satisfeito com o serviço. A entrega foi pontual e o veículo atendeu todas as minhas
+                    necessidades."</p>
+            </div>
+            <div class="testemunho">
+                <img src="img/11.png" alt="Cliente 3" class="cliente-foto">
+                <h3>Ana Costa</h3>
+                <p>"Recomendo! O processo de reserva foi fácil e o carro era exatamente como descrito. Sem dúvidas, voltarei
+                    a alugar."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reserva">
+        <h2>Formulário de Reserva Rápida</h2>
+        <form class="reserva-form">
+            <div class="form-group">
+                <label for="tipoVeiculo">Tipo de Veículo:</label>
+                <select id="tipoVeiculo" name="tipoVeiculo" required>
+                    <option value="" disabled selected>Selecione um veículo</option>
+                    <option value="simples">Carro Simples</option>
+                    <option value="corporativo">Carro Corporativo</option>
+                    <option value="evento">Carro para Evento</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dataRetirada">Data e Hora de Retirada:</label>
+                <input type="datetime-local" id="dataRetirada" name="dataRetirada" required>
+            </div>
+            <div class="form-group">
+                <label for="dataDevolucao">Data e Hora de Devolução:</label>
+                <input type="datetime-local" id="dataDevolucao" name="dataDevolucao" required>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="cta-button">Confirmar Reserva</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo">
+                <img src="img/4 (5).png" alt="Logo BM Carros" class="footer-logo">
+                <!-- Substitua pelo caminho da sua logo -->
+            </div>
+            <div class="sobre-nos">
+                <h3>Sobre Nós</h3>
+                <p>Na BM Carros Aluguer, oferecemos uma ampla gama de veículos para atender às suas necessidades de
+                    transporte, seja para eventos, negócios ou lazer. Nossa missão é proporcionar uma experiência de aluguel
+                    confiável e acessível, com atendimento de excelência.</p>
+            </div>
+            <div class="links-rapidos">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#frota">Frota</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="informacoes-contato">
+                <h3>Informações de Contato</h3>
+                <p>Telefone: (+258) 84-5603-981</p>
+                <p>Email: contato@bmcarros.com</p>
+                <p>Endereço: Rua Principal, 123 - Machava Sede, Moçambique</p> <!-- Dados de Machava Sede -->
+            </div>
+            <div class="redes-sociais">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.facebook.com" target="_blank"><img src="img/facebook-icon.png" alt="Facebook"
+                        class="social-icon"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="img/instagram-icon.png" alt="Instagram"
+                        class="social-icon"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="img/twitter-icon.png" alt="Twitter"
+                        class="social-icon"></a>
+            </div>
+            <div class="politicas">
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="#termos">Termos e Condições</a></li>
+                    <li><a href="#politica-privacidade">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BM Carros Aluguer. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

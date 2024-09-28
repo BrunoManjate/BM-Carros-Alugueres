@@ -2,6 +2,13 @@
 
 ![Screenshot_27-9-2024_204015_](https://github.com/user-attachments/assets/c5595cf4-d6a7-411d-8996-a2a4c1c5cb0c)
 
+![Macbook-Air-](https://github.com/user-attachments/assets/c02ea68e-504a-4f50-bcfd-76736ef76c8c)
+![Galaxy-Tab-S7-](https://github.com/user-attachments/assets/14a33803-58a4-45e1-acb7-f21bef07256b)
+![iPad-Mini-](https://github.com/user-attachments/assets/4de07248-3c25-4927-aa0d-504dfe6cb27c)
+![iPhone-13-PRO-MAX- (1)](https://github.com/user-attachments/assets/ddf74520-a5a4-4682-85cd-f07982bc8d30)
+![iPhone-13-PRO-MAX-](https://github.com/user-attachments/assets/c70439ab-7e12-43f8-bf6e-b2605e96e051)
+
+
 Bem-vindo ao repositório do **BM Carros Alugueres**, uma plataforma para aluguel de veículos em Moçambique, oferecendo uma ampla gama de carros para eventos, negócios e passeios.
 
 ## Visão Geral

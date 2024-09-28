@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,6 +16,7 @@ header {
     padding: 20px;
     background-color: #000;
     color: #fff;
+    position: relative;
 }
 
 .logo {
@@ -24,9 +26,13 @@ header {
 
 .logo-img {
     width: 40px;
-    /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
-    /* Mantém a proporção da imagem */
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -45,11 +51,6 @@ nav ul li a {
     font-size: 18px;
 }
 
-.cta-container {
-    display: flex;
-    align-items: center;
-}
-
 .cta-button {
     background-color: #e63946;
     color: #fff;
@@ -65,27 +66,56 @@ nav ul li a {
     background-color: #d62839;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    .cta-container {
-        margin-top: 10px;
-    }
+/* Estilos do menu hamburguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: 0.4s;
+}
+
+/* Menu lateral oculto por padrão */
+nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #000;
+    height: 100vh;
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
 /* Hero Section */
 .hero {
     background-image: url('img/a-black-and-white-photo-of-a-bmw-m4-car-parked-on--Std4TBf8Qn2_7KSer5W4SQ-KWTh4iF7SXaoJDccRG3BNg.jpeg');
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    min-height: 60vh; /* Usar min-height para melhor responsividade */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,8 +164,8 @@ nav ul li a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 20px;
-    width: 300px;
-    /* Tamanho padrão */
+    flex: 1 1 calc(33% - 30px); /* Três por linha */
+    max-width: calc(33% - 30px);
 }
 
 .veiculo img {
@@ -157,90 +187,11 @@ nav ul li a {
     color: #e63946;
 }
 
-.cta-button {
-    display: block;
-    margin: 10px auto;
-    /* Centraliza o botão */
-    background-color: #e63946;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-    /* Remove underline */
-}
-
-.cta-button:hover {
-    background-color: #d62839;
-    /* Vermelho escuro */
-}
-
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        /* Alinha logo e menu verticalmente */
-        align-items: flex-start;
-        /* Alinha à esquerda */
-    }
-
-    nav ul {
-        flex-direction: column;
-        /* Menu em coluna */
-        width: 100%;
-        /* Largura total */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        /* Espaço entre itens do menu */
-    }
-
-    .hero h2 {
-        font-size: 28px;
-        /* Tamanho do título menor */
-    }
-
-    .hero p {
-        font-size: 18px;
-        /* Tamanho do subtítulo menor */
-    }
-
-    .veiculo {
-        width: 100%;
-        /* Veículos ocupam 100% da largura */
-        max-width: 300px;
-        /* Largura máxima para manter o estilo */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 24px;
-        /* Tamanho do título ainda menor */
-    }
-
-    .hero p {
-        font-size: 16px;
-        /* Tamanho do subtítulo ainda menor */
-    }
-
-    .veiculo {
-        margin: 10px;
-        /* Menos margem entre veículos */
-        padding: 15px;
-        /* Menos preenchimento */
-    }
-}
-
-/*beneficios*/
+/* Benefícios */
 .beneficios {
     padding: 40px 20px;
     text-align: center;
     background-color: #fff;
-    /* Cor de fundo clara */
 }
 
 .beneficios h2 {
@@ -251,29 +202,20 @@ nav ul li a {
 .beneficios-container {
     display: flex;
     justify-content: space-around;
-    /* Espaço entre os ícones */
     flex-wrap: wrap;
-    /* Permite que os ícones se movam para a linha seguinte em telas menores */
 }
 
 .beneficio {
-    flex: 1 1 250px;
-    /* Permite flexibilidade e largura mínima */
+    flex: 1 1 250px; /* Ajustável */
     margin: 15px;
-    /* Margem entre os benefícios */
     text-align: center;
-    /* Centraliza o texto */
     max-width: 300px;
-    /* Largura máxima para os cartões */
 }
 
 .beneficio-icon {
     width: 60px;
-    /* Tamanho dos ícones */
     height: auto;
-    /* Mantém a proporção da imagem */
     margin-bottom: 10px;
-    /* Espaço entre o ícone e o texto */
 }
 
 .beneficio h3 {
@@ -284,33 +226,13 @@ nav ul li a {
 .beneficio p {
     font-size: 16px;
     color: #666;
-    /* Cor do texto descritivo */
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .beneficios-container {
-        justify-content: center;
-        /* Centraliza os ícones em telas menores */
-    }
-
-    .beneficio {
-        flex: 1 1 200px;
-        /* Ajusta a largura mínima para telas menores */
-    }
-
-    .beneficio-icon {
-        width: 50px;
-        /* Tamanho menor dos ícones */
-    }
-}
-
-/*testemunhos*/
+/* Testemunhos */
 .testemunhos {
     padding: 40px 20px;
     text-align: center;
     background-color: #f0f0f0;
-    /* Cor de fundo leve */
 }
 
 .testemunhos h2 {
@@ -321,33 +243,25 @@ nav ul li a {
 .testemunhos-container {
     display: flex;
     justify-content: space-around;
-    /* Espaço entre os testemunhos */
     flex-wrap: wrap;
-    /* Permite que os testemunhos se movam para a linha seguinte em telas menores */
 }
 
 .testemunho {
     background-color: #fff;
-    /* Fundo branco para os cartões de testemunho */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 20px;
-    width: 300px;
-    /* Largura padrão para cada testemunho */
+    flex: 1 1 calc(33% - 30px); /* Três por linha */
+    max-width: calc(33% - 30px);
     text-align: center;
-    /* Centraliza o texto */
 }
 
 .cliente-foto {
     width: 80px;
-    /* Tamanho da foto do cliente */
     height: 80px;
-    /* Tamanho fixo para as fotos */
     border-radius: 50%;
-    /* Fotos em formato circular */
     margin-bottom: 10px;
-    /* Espaço entre a foto e o texto */
 }
 
 .testemunho h3 {
@@ -358,34 +272,13 @@ nav ul li a {
 .testemunho p {
     font-size: 16px;
     color: #666;
-    /* Cor do texto descritivo */
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .testemunhos-container {
-        justify-content: center;
-        /* Centraliza os testemunhos em telas menores */
-    }
-
-    .testemunho {
-        width: 90%;
-        /* Largura ajustada para telas menores */
-    }
-
-    .cliente-foto {
-        width: 60px;
-        /* Tamanho menor das fotos */
-        height: 60px;
-        /* Tamanho menor das fotos */
-    }
-}
-
+/* Formulário de Reserva */
 .reserva {
     padding: 40px 20px;
     text-align: center;
     background-color: #fff;
-    /* Cor de fundo clara */
 }
 
 .reserva h2 {
@@ -396,54 +289,38 @@ nav ul li a {
 .reserva-form {
     display: flex;
     flex-direction: column;
-    /* Coloca os campos em coluna */
     align-items: center;
-    /* Centraliza os itens do formulário */
     max-width: 400px;
-    /* Largura máxima do formulário */
     margin: 0 auto;
-    /* Centraliza o formulário na página */
 }
 
 .form-group {
     margin-bottom: 15px;
-    /* Espaço entre os campos do formulário */
     width: 100%;
-    /* Largura total */
 }
 
 label {
     display: block;
-    /* Torna os labels em bloco */
     margin-bottom: 5px;
-    /* Espaço entre o label e o campo */
     font-size: 16px;
-    /* Tamanho da fonte do label */
 }
 
 input,
 select {
     width: 100%;
-    /* Largura total dos campos */
     padding: 10px;
-    /* Espaço interno dos campos */
     border: 1px solid #ccc;
-    /* Borda dos campos */
     border-radius: 5px;
-    /* Bordas arredondadas */
     font-size: 16px;
-    /* Tamanho da fonte do campo */
 }
 
 input:focus,
 select:focus {
     border-color: #e63946;
-    /* Cor da borda ao focar */
 }
 
 .cta-button {
     background-color: #e63946;
-    /* Vermelho */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -451,54 +328,37 @@ select:focus {
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
-    /* Remove underline */
 }
 
 .cta-button:hover {
     background-color: #d62839;
-    /* Vermelho escuro */
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .reserva-form {
-        width: 90%;
-        /* Largura ajustada para telas menores */
-    }
-}
-
+/* Rodapé */
 .footer {
     background-color: #000;
-    /* Fundo preto */
     color: #fff;
-    /* Texto branco */
     padding: 40px 20px;
-    /* Espaçamento interno */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    /* Ajusta o espaçamento entre colunas */
     flex-wrap: wrap;
-    /* Permite colunas se reorganizarem em telas menores */
 }
 
 .footer-logo {
     width: 150px;
-    /* Ajuste o tamanho da logo conforme necessário */
     margin-bottom: 20px;
 }
 
 .sobre-nos {
     max-width: 250px;
-    /* Limita a largura da seção Sobre Nós */
     margin-bottom: 20px;
 }
 
 .footer h3 {
     margin-bottom: 15px;
-    /* Espaço abaixo do título */
 }
 
 .footer p {
@@ -507,58 +367,109 @@ select:focus {
 
 .footer ul {
     list-style: none;
-    /* Remove marcadores da lista */
     padding: 0;
-    /* Remove padding */
 }
 
 .footer ul li {
     margin-bottom: 10px;
-    /* Espaço entre os itens da lista */
 }
 
 .footer a {
     color: #fff;
-    /* Cor dos links */
     text-decoration: none;
-    /* Remove sublinhado */
 }
 
 .footer a:hover {
     text-decoration: underline;
-    /* Sublinha ao passar o mouse */
 }
 
 .redes-sociais {
     display: flex;
     align-items: center;
-    /* Alinha os ícones ao centro */
 }
 
 .social-icon {
     width: 30px;
-    /* Tamanho dos ícones sociais */
     height: 30px;
-    /* Tamanho dos ícones sociais */
     margin: 0 10px;
-    /* Espaço entre os ícones */
 }
 
 .footer-bottom {
     text-align: center;
-    /* Centraliza o texto */
     margin-top: 20px;
-    /* Espaço acima do rodapé */
     font-size: 14px;
-    /* Tamanho da fonte do rodapé */
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    .footer-container {
+    /* Header responsivo */
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.open ul {
+        display: flex;
         flex-direction: column;
-        /* Alinha as colunas em coluna em telas menores */
-        align-items: center;
-        /* Centraliza os itens */
+    }
+
+    header {
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero h2 {
+        font-size: 28px; /* Ajuste do tamanho da fonte */
+    }
+
+    .hero p {
+        font-size: 18px; /* Ajuste do tamanho da fonte */
+    }
+
+    /* Frota e Testemunhos responsivos */
+    .veiculo,
+    .testemunho {
+        flex: 1 1 calc(50% - 30px); /* Duas por linha */
+        max-width: calc(50% - 30px);
+    }
+
+    /* Benefícios responsivos */
+    .beneficio {
+        flex: 1 1 calc(100% - 30px); /* Um por linha em telas pequenas */
+        max-width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes adicionais para dispositivos muito pequenos */
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .frota h2,
+    .beneficios h2,
+    .testemunhos h2,
+    .reserva h2 {
+        font-size: 24px;
+    }
+
+    .veiculo h3,
+    .testemunho h3,
+    .beneficio h3 {
+        font-size: 18px;
+    }
+
+    .veiculo p,
+    .testemunho p,
+    .beneficio p {
+        font-size: 14px;
     }
 }
